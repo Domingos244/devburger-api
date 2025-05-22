@@ -1,6 +1,4 @@
-const { UPDATE } = require("sequelize/lib/query-types");
-
-//** @type {import('sequelize-cli').migration}*/
+/** @type {import('sequelize-cli').migration}*/
 module.exports = {
     async up(queryInterface, Sequelize) {
         await queryInterface.createTable('users', {
