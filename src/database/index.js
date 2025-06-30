@@ -9,7 +9,7 @@ import Category from '../app/models/Category';
 
 const models = [User, Product, Category];
 
-class Database {
+class Checkout {
     constructor() {
         this.init();
         this.mongo();
@@ -30,4 +30,4 @@ class Database {
     }
 }
 
-export default new Database();
+export default Checkout;

@@ -1,51 +1,53 @@
 import mongoose from "mongoose";
 
-const OrderSchema = mew mongoose.Schema({
+const OrderSchema = new mongoose.Schema(
+  {
     user: {
-        id: {
-            type: String,
-            required: true,
-        },
-        name: {
-            type: string,
-            required: true,
-        },
-    },
-    products: [
-        {
-            id: {
-                type: Number,
-                required: true,
-            },
-            name: {
-                type: String,
-                required: true,
-            },
-            price: {
-                type: Number,
-                required: true,
-            },
-            category: {
-                type: String,
-                required: true,
-            },
-            url: {
-                type: String,
-                required: true,
-            },
-            quantity: {
-                type: String,
-                required: true,
-            },
-        },
-    ],
-    status: {
+      id: {
         type: String,
         required: true,
+      },
+      name: {
+        type: String,
+        required: true,
+      },
     },
-},
-{
+    products: [
+      {
+        id: {
+          type: Number,
+          required: true,
+        },
+        name: {
+          type: String,
+          required: true,
+        },
+        price: {
+          type: Number,
+          required: true,
+        },
+        category: {
+          type: String,
+          required: true,
+        },
+        url: {
+          type: String,
+          required: true,
+        },
+        quantity: {
+          type: Number, // ✅ corrigido
+          required: true,
+        },
+      },
+    ],
+    status: {
+      type: String,
+      required: true,
+    },
+  },
+  {
     timestamps: true,
-});
+  }
+);
 
-export default mongoose.model('Order', OrderSchema);
+export default mongoose.model("Order", OrderSchema);
