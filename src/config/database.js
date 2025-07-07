@@ -1,15 +1,13 @@
-module.exports = {
+const configDatabase = {
   development: {
     dialect: 'postgres',
-    host: 'localhost', // <-- cuidado: 'Localhost' com L maiúsculo pode dar erro
-    port: 5432,
+    host: 'localhost',
     username: 'postgres',
     password: 'postgres',
     database: 'devburger',
     define: {
       timestamps: true,
       underscored: true,
-      underscoredAll: true,
     },
   },
 
@@ -42,5 +40,4 @@ module.exports = {
   },
 };
 
-
-
+export default configDatabase;

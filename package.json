@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "DevBurger API.",
   "main": "src/server.js",
-  "type": ".sequelizerc.cjs",
-
+  "type": "module",
   "scripts": {
+    "start": "node src/server.js",
     "dev": "nodemon"
   },
   "author": {
@@ -14,8 +14,6 @@
   },
   "license": "ISC",
   "dependencies": {
-    "-": "^0.0.1",
-    "D": "^1.0.0",
     "bcrypt": "^5.1.1",
     "cors": "^2.8.5",
     "express": "^4.21.2",

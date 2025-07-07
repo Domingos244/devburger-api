@@ -1,6 +1,6 @@
 import * as Yup from 'yup';
+import User from '../models/User.js';
 import Product from '../models/Product.js';
-const User = require('../models/User');
 
 class ProductController {
     async store(request, response) {

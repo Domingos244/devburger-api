@@ -2,7 +2,7 @@ import { v4 } from 'uuid';
 import * as Yup from 'yup';
 
 
-import User from '../models/User';
+import User from '../models/User.js';
 class UserController {
     async store(request, response) {
         const schema = Yup.object({
@@ -13,7 +13,7 @@ class UserController {
         });
         
         try {
-            schema.validateSync(request.body, { abortEarly: false });
+            await schema.validate(request.body, { abortEarly: false });
         } catch (err) {
             return response.status(400).json({ error: err.errors });
         }
